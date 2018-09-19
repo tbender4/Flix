@@ -8,11 +8,13 @@
 
 import UIKit
 
-class NowPlayingVC: UIViewController, UITableViewDataSource {
+class NowPlayingVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
-        tableView.dataSource = self
+//        tableView.dataSource = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -27,10 +29,10 @@ class NowPlayingVC: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell")
+        return cell!
     }
 
 }
