@@ -10,13 +10,13 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingVC: UIViewController, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [[String:Any]] = []
     var refreshControl: UIRefreshControl!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshControl = UIRefreshControl()
@@ -24,11 +24,11 @@ class NowPlayingVC: UIViewController, UITableViewDataSource {
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         fetchMovies()
-    
+        
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl){
-    self.fetchMovies()
+        self.fetchMovies()
     }
     
     func fetchMovies() {
@@ -50,13 +50,22 @@ class NowPlayingVC: UIViewController, UITableViewDataSource {
         task.resume()
         
     }
-
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let movie = movies[indexPath.row]
+            let detailVC = segue.destination as! MovieDetailVC
+            detailVC.movie = movie 
+        }
+        
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
@@ -72,5 +81,5 @@ class NowPlayingVC: UIViewController, UITableViewDataSource {
         cell.posterImageView.af_setImage(withURL: posterURL)
         return cell
     }
-
+    
 }

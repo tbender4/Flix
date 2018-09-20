@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8173B65F215451210048D592 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B65E215451210048D592 /* MovieDetailVC.swift */; };
 		81CA0D762152E4340032E446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA0D752152E4340032E446 /* AppDelegate.swift */; };
 		81CA0D7B2152E4340032E446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CA0D792152E4340032E446 /* Main.storyboard */; };
 		81CA0D7D2152E4350032E446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CA0D7C2152E4350032E446 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		3C8289BE01AC060A4F62A417 /* Pods-Flix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flix/Pods-Flix.release.xcconfig"; sourceTree = "<group>"; };
 		7E87C65D1F417C6EC09DCA0D /* Pods_Flix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8173B65E215451210048D592 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		81CA0D722152E4340032E446 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CA0D752152E4340032E446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CA0D7A2152E4340032E446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				81CA0D8A2152EC120032E446 /* NowPlayingVC.swift */,
+				8173B65E215451210048D592 /* MovieDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				81CA0D8B2152EC120032E446 /* NowPlayingVC.swift in Sources */,
 				81CA0D762152E4340032E446 /* AppDelegate.swift in Sources */,
+				8173B65F215451210048D592 /* MovieDetailVC.swift in Sources */,
 				81CA0D8D2152ECBC0032E446 /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +383,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYA9T3Q2ZS;
 				INFOPLIST_FILE = Flix/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KashfiFahim.Flix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -395,7 +402,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYA9T3Q2ZS;
 				INFOPLIST_FILE = Flix/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KashfiFahim.Flix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
