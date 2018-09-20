@@ -56,7 +56,7 @@ class NowPlayingVC: UIViewController, UITableViewDataSource {
         if let indexPath = tableView.indexPath(for: cell){
             let movie = movies[indexPath.row]
             let detailVC = segue.destination as! MovieDetailVC
-            detailVC.movie = movie 
+            detailVC.movie = movie      
         }
         
     }
